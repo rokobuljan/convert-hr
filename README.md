@@ -1,7 +1,7 @@
 # convertHR - Convert number to Croatian words
 
 Convert a float number to Croatian words.  
-Useful when inneed to show a Money amount inwords like i.e:
+Useful when in need to show a Money amount in words like i.e:
 
 > **Iznos:** *121024.05*   
 > **Slovima:** *stodvadesetjednatisućadvadesetčetiri kune i pet lipa*
@@ -57,3 +57,7 @@ To create a readable `test.txt` file with your test results from `test.js`
 ```sh
 $ node --experimental-modules test.js > test.txt
 ```
+
+## Licence:
+
+MIT

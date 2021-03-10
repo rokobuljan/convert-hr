@@ -68,7 +68,7 @@ const convertHR = (num, options) => {
     const tens = (i) => (i < 10 ? ones(i) : i === 10 || i >= 20 ? (i % 10 ? lib[2][~~(i / 10)] + dlm + ones(i % 10) : lib[2][~~(i / 10)] + dlm) : lib[1][i % 10] + dlm);
     const huns = (i) => (i < 10 ? ones(i) : i < 100 ? tens(i) : lib[3][~~(i / 100)] + dlm + tens(i % 100));
     const i = parseInt(num);
-    if (!Number.isSafeInteger(i)) return "Error";
+    if (i > 2 ** 46) return "Error";
     const arr = Math.abs(num).toLocaleString("en-US", locOpts).split(/[,.]/g);
     const d = +arr.pop();
     const len = arr.length;
